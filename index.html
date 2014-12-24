@@ -1,231 +1,402 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0027)http://medband.handband.cl/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<script async="" src="./medband_files/analytics.js"></script><script type="text/javascript">/* Copyright 2008 Google. */ (function() { var b=window,e="chrome",g="tick",h="wtsrt_",l="tbsd_",m="tbnd_",n="start",p="_wtsrt",q="_tbnd",r="CSI/";(function(){function k(a){this.t={};this.tick=function(a,d,c){this.t[a]=[void 0!=c?c:(new Date).getTime(),d];if(void 0==c)try{b.console.timeStamp(r+a)}catch(f){}};this[g](n,null,a)}var a;b.performance&&(a=b.performance.timing);var t=a?new k(a.responseStart):new k;b.jstiming={Timer:k,load:t};if(a){var d=a.navigationStart,f=a.responseStart;0<d&&f>=d&&(b.jstiming.srt=f-d)}if(a){var c=b.jstiming.load;0<d&&f>=d&&(c[g](p,void 0,d),c[g](h,p,f),c[g](l,h))}try{a=null,b[e]&&b[e].csi&&(a=Math.floor(b[e].csi().pageT),
-c&&0<d&&(c[g](q,void 0,b[e].csi().startE),c[g](m,q,d))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<d&&(c[g](q,void 0,b.external.startE),c[g](m,q,d))),a&&(b.jstiming.pt=a)}catch(u){}})(); })()
-</script>
-<link rel="shortcut icon" type="image/x-icon" href="http://www.google.com/images/icons/product/sites-16.ico">
-<link rel="apple-touch-icon" href="http://www.gstatic.com/sites/p/87315d/system/app/images/apple-touch-icon.png" type="image/png">
-<script type="text/javascript">/* Copyright 2008 Google. */ (function() { var d=window,e="length",h="",k="__duration__",l="function";function m(c){return document.getElementById(c)}d.byId=m;function n(c){return c.replace(/^\s+|\s+$/g,h)}d.trim=n;var p=[],q=0;d.JOT_addListener=function(c,a,b){var f=new String(q++);c={eventName:c,handler:a,compId:b,key:f};p.push(c);return f};d.JOT_removeListenerByKey=function(c){for(var a=0;a<p[e];a++)if(p[a].key==c){p.splice(a,1);break}};d.JOT_removeAllListenersForName=function(c){for(var a=0;a<p[e];a++)p[a].eventName==c&&p.splice(a,1)};
-d.JOT_postEvent=function(c,a,b){var f={eventName:c,eventSrc:a||{},payload:b||{}};if(d.JOT_fullyLoaded)for(a=p[e],b=0;b<a&&b<p[e];b++){var g=p[b];g&&g.eventName==c&&(f.listenerCompId=g.compId||h,(g=typeof g.handler==l?g.handler:d[g.handler])&&g(f))}else d.JOT_delayedEvents.push({eventName:c,eventSrc:a,payload:b})};d.JOT_delayedEvents=[];d.JOT_fullyLoaded=!1;
-d.JOT_formatRelativeToNow=function(c,a){var b=((new Date).getTime()-c)/6E4;if(1440<=b||0>b)return null;var f=0;60<=b&&(b/=60,f=2);2<=b&&f++;return a?d.JOT_siteRelTimeStrs[f].replace(k,Math.floor(b)):d.JOT_userRelTimeStrs[f].replace(k,Math.floor(b))}; })()
-</script>
-<script>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html dir="ltr" lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html dir="ltr" lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html dir="ltr" lang="en-US" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="content-type" />
+  <meta name="description" content="cmsmasters responsive html5 website template" />
+  <meta name="keywords" content="html5, css3, template, responsive, adaptive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="static/css/styles/fonts.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Headland+One" type="text/css" />
+  <link rel="stylesheet" href="static/css/styles/jackbox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="static/revolution/css/captions-original.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="static/revolution/css/captions.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="static/revolution/css/settings.css" media="screen" />
+  <link rel="stylesheet" href="static/css/styles/jquery.jPlayer.css" type="text/css" media="screen" />
+  <script src="static/js/modernizr.custom.all.js" type="text/javascript"></script>
+  <script src="static/js/jquery.min.js" type="text/javascript"></script>
+  <script src="static/js/jquery.easing.js" type="text/javascript"></script>
+  <script type="text/javascript" src="static/revolution/js/jquery.themepunch.revolution.js"></script>
+  <script type="text/javascript" src="static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="static/revolution/js/jquery.themepunch.plugins.min.js"></script>
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" href="static/css/styles/ie.css" type="text/css" />
+  <link rel="stylesheet" href="static/css/styles/ie_css3.css" type="text/css" media="screen" />
+  <![endif]-->
+  <title>MedBand</title>
+</head>
+<body>
+  <!-- __________________________________________________ Start Page -->
 
+  <section id="page">
+    <a href="#" id="slide_top"></a>
+    <!-- __________________________________________________ Start Header -->
 
-var webspace = {"scottyUrl":"/_/upload","isConsumer":false,"canPublishScriptToAnyone":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"sharingUrlPrefix":"/_/sharing","csiReportUri":"http://csi.gstatic.com/csi","sharingPolicy":"OPENED_WITH_INDICATOR","siteNoticeUrlEnabled":null,"siteNoticeUrlAddress":null,"analyticsAccountId":"","baseUri":"","enableUniversalAnalytics":false,"name":"medband","features":{"copySiteProgressUpdates":true,"asyncPermanentDelete":true,"colorsAndFontsFix":true,"docosHideNotificationSettings":true,"driveImageLinkFromOnepick":true,"siteNoticeUrl":true,"asyncPageKeyFix":true,"fileCabinetScreenReaderFix":true,"pdfEmbedSupport":false,"siteMapBottomPaginationButtonsFix":true,"newMyMapsEmbeds":true,"plusBadge":false,"analyticsTrackingForCorp":false,"freebirdFormEmbedDocTypeFix":true,"webspaceUrlScrubOnlyOnBlur":true,"addShortcutToTextBoxDialog":true,"htmlEmbed":true,"newCountDownDialog":true,"pageTreeKeyboardFix":true,"domainAnalyticsInGAOnly":false,"languageSelectDefaultTextSetToDefault":false},"domain":"handband.cl","adsensePublisherId":null,"gvizVersion":1,"siteTitle":"medband","signInUrl":"https://www.google.com/a/SelectSession?continue\u003dhttp://sites.google.com/a/handband.cl/medband/home\u0026service\u003djotspot","pageSharingId":"jotspot_page","plusPageId":"","onepickBaseUrl":"https://docs.google.com","siteNoticeRevision":null,"termsUrl":"http://sites.google.com/site/sites/system/app/pages/meta/terms?apps\u003d1","enableAnalytics":false,"isPublic":true,"siteNoticeMessage":null,"plusPageUrl":"","homePath":"/","sharingId":"jotspot","isAdsenseEnabled":true,"adsensePromoClickedOrSiteIneligible":true,"isStartPageEnabled":true,"domainAnalyticsAccountId":""};
-
-
-
-webspace.gadgets = {"baseUri":"/system/app/pages/gadgets"};
-
-
-webspace.user = {"uid":"","renderMobile":false,"namespaceUser":false,"sessionIndex":"","primaryEmail":"guest","displayNameOrEmail":"guest","namespace":"","hasAdminAccess":false,"guest_":true,"keyboardShortcuts":true,"hasWriteAccess":false,"domain":"","dasherUser":false,"userName":"guest"};
-
-webspace.page = {"canDeleteWebspace":null,"locale":"es","state":"","wuid":"wuid:gx:692c99174846661a","pageInheritsPermissions":null,"timeZone":"America/Los_Angeles","properties":{},"type":"text","canChangePath":false,"parentWuid":null,"revision":8,"title":"Medband","isRtlLocale":false,"bidiEnabled":false,"siteLocale":"es","name":"home","path":"/home","isSiteRtlLocale":false,"parentPath":null};
-webspace.page.breadcrumbs = [{"title":"Medband","dir":"ltr","path":"/home","deleted":false}];
-
-
-webspace.editorResources = {
-  text: [
-    'http://www.gstatic.com/sites/p/87315d/system/js/codemirror.js',
-    'http://www.gstatic.com/sites/p/87315d/system/app/css/codemirror_css.css',
-    'http://www.gstatic.com/sites/p/87315d/system/js/trog_edit__es.js',
-    'http://www.gstatic.com/sites/p/87315d/system/app/css/trogedit.css',
-    '/_/rsrc/1418253394000/system/app/css/editor.css',
-    'http://www.gstatic.com/sites/p/87315d/system/app/css/codeeditor.css',
-    '/_/rsrc/1418253394000/system/app/css/camelot/editor-jfk.css'
-  ],
-  sitelayout: [
-    'http://www.gstatic.com/sites/p/87315d/system/app/css/sitelayouteditor.css'
-  ]
-};
-
-var JOT_clearDotPath = 'http://www.gstatic.com/sites/p/87315d/system/app/images/cleardot.gif';
-
-
-var JOT_userRelTimeStrs = ["hace un minuto","hace __duration__ minutos","hace una hora","hace __duration__ horas"];
-
-
-webspace.siteTemplateId = false;
-
-
-webspace.page.currentTemplate = {"title":"P\u00e1gina web","path":"/system/app/pagetemplates/text"};
-
-
-
-var JOT_siteRelTimeStrs = ["hace un minuto","hace __duration__ minutos","hace una hora","hace __duration__ horas"];
-
-</script>
-<script type="text/javascript">
-                window.jstiming.load.tick('scl');
-              </script>
-<meta name="title" content="medband">
-<meta itemprop="name" content="medband">
-<meta property="og:title" content="medband">
-<style type="text/css">
-</style>
-<link rel="stylesheet" type="text/css" href="./medband_files/standard-css-simplywhite-ltr-ltr.css">
-<link rel="stylesheet" type="text/css" href="./medband_files/overlay.css">
-<link rel="stylesheet" type="text/css" href="./medband_files/allthemes-view.css">
-<!--[if IE]>
-          <link rel="stylesheet" type="text/css" href="/system/app/css/camelot/allthemes%2die.css" />
-        <![endif]-->
-<title>medband</title>
-<meta itemprop="image" content="http://medband.handband.cl/_/rsrc/1416007233205/home/original-logos-2014-Nov-7035-2158469.png?height=234&amp;width=400">
-<meta property="og:image" content="http://medband.handband.cl/_/rsrc/1416007233205/home/original-logos-2014-Nov-7035-2158469.png?height=234&amp;width=400">
-<script type="text/javascript">
-                window.jstiming.load.tick('cl');
-              </script><style type="text/css"></style>
-<script src="./medband_files/ga.js"></script></head>
-<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" es            ">
-<div id="sites-page-toolbar" class="sites-header-divider">
-<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+    <header id="header">
+      <div class="header_inner">
+        <!-- <div class="social_block">
+        <ul>
+        <li>
+        <a href="#" target="_blank">
+        <img alt="twitter" src="static/images/socicons/twitter.png">
+      </a>
+    </li>
+    <li>
+    <a href="#" target="_blank">
+    <img alt="linkedin" src="static/images/socicons/linkedin.png">
+  </a>
+</li>
+<li>
+<a href="#" target="_blank">
+<img alt="facebook" src="static/images/socicons/facebook.png">
+</a>
+</li>
+<li>
+<a href="#" target="_blank">
+<img alt="vimeo" src="static/images/socicons/vimeo.png">
+</a>
+</li>
+<li>
+<a href="#" target="_blank">
+<img alt="you tube" src="static/images/socicons/youtube.png">
+</a>
+</li>
+</ul>
+<a class="social_toggle" href="#"><span></span></a>
 </div>
-<div id="sites-chrome-everything-scrollbar">
-<div id="sites-chrome-everything" class="">
-<div id="sites-chrome-page-wrapper" style="direction: ltr">
-<div id="sites-chrome-page-wrapper-inside">
-<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
-<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
-<tbody><tr class="sites-header-primary-row" id="sites-chrome-userheader">
-</tr>
-<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
-<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
-</td>
-</tr>
-</tbody></table>
-</div>
-<div id="sites-chrome-main-wrapper">
-<div id="sites-chrome-main-wrapper-inside">
-<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
-<tbody><tr>
-<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left" style="display: none; width: 150px">
-<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotid="navList"><li class="nav-first "><div class="current-bg" jotid="wuid:gx:692c99174846661a" dir="ltr" style="padding-left: 5px;">Medband</div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="http://medband.handband.cl/system/app/pages/sitemap/hierarchy" jotid="wuid:gx:116ff054e5c327da" class="sites-navigation-link">Mapa del sitio</a></div></li></ul></div></div>
-</td>
-<td id="sites-canvas-wrapper">
-<div id="sites-canvas" role="main">
-<div id="goog-ws-editor-toolbar-container"> </div>
-<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="display: none;">
-</div>
-<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="display: none;" align="left">
-<span id="sites-page-title" dir="ltr">Medband</span>
-</h3>
-<div id="sites-canvas-main" class="sites-canvas-main">
-<div id="sites-canvas-main-content">
-<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><img alt="medband" border="0" height="234" src="./medband_files/original-logos-2014-Nov-7035-2158469.png" width="400"></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><div><br></div><div><font size="6">Pronto</font></div><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><br></div><br></div></td></tr></tbody></table>
-</div>
-</div>
-<div id="sites-canvas-bottom-panel">
-<div id="sites-attachments-container">
-</div>
-</div>
-</div>
-</td>
-</tr>
-</tbody></table>
-</div>
-</div>
-<div id="sites-chrome-footer-wrapper">
-<div id="sites-chrome-footer-wrapper-inside">
-<div id="sites-chrome-footer">
-<div xmlns="http://www.w3.org/1999/xhtml" class="sites-subfooter"><div class="sites-subfooter-content"><div dir="ltr"><div style="text-align:center"><p style="margin:0px;font-family:Helvetica Neue"><font size="3">Ventas: +562 2717 1950</font></p><p style="margin:0px;font-family:Helvetica Neue"><font size="3">Contacto: contacto@handband.cl</font></p><p style="margin:0px;font-family:Helvetica Neue"><font size="2"><br></font></p><p style="margin:0px;font-family:Helvetica Neue"><font size="2">Copyright 2014 © Hand Band Chile Ltda. Todos los derechos reservados.</font></p><p style="margin:0px;font-family:Helvetica Neue"><br></p></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="sites-chrome-adminfooter-container">
+-->
+<a class="logo" href="index.html"><img src="static/images/logo.png" height="69" alt="" /></a>
+<a class="resp_navigation" href="javascript:void(0);"><span></span></a>
+<div class="cl"></div>
+<nav>
+  <ul id="navigation">
+    <li class="current_page_item"><a href="index.html"><span>Inicio</span></a></li>
+    <!-- <li class="drop"><a href="javascript:void(0);"><span>Productos</span></a>
+      <ul>
+        <li class="drop"><a href="javascript:void(0);"><span>Shortcodes</span></a>
+          <ul>
+            <li><a href="buttons.html"><span>Buttons</span></a></li>
+            <li><a href="boxes.html"><span>Information Boxes</span></a></li>
+            <li><a href="columns.html"><span>Columns</span></a></li>
+            <li><a href="pricing_tables.html"><span>Pricing Tables</span></a></li>
+            <li><a href="tabs.html"><span>Tabs &amp; Toggle</span></a></li>
+            <li><a href="shortcodes.html"><span>Post Type Shortcode</span></a></li>
+            <li><a href="media.html"><span>Media</span></a></li>
+            <li><a href="player.html"><span>Audio &amp; Video Players</span></a></li>
+            <li><a href="lightboxes.html"><span>Lightboxes</span></a></li>
+            <li><a href="tour.html"><span>Site Tour</span></a></li>
+            <li><a href="googlemaps.html"><span>Google Maps</span></a></li>
+          </ul>
+        </li>
+        <li><a href="typography.html"><span>Typography</span></a></li>
+        <li class="drop"><a href="javascript:void(0);"><span>Layouts</span></a>
+          <ul>
+            <li><a href="about.html"><span>About Page</span></a></li>
+            <li><a href="services.html"><span>Services Page</span></a></li>
+            <li><a href="timeline.html"><span>Timeline Page</span></a></li>
+            <li><a href="error.html"><span>404 Error Page</span></a></li>
+            <li><a href="sitemap.html"><span>Sitemap</span></a></li>
+            <li><a href="lsidebar.html"><span>Left Sidebar</span></a></li>
+            <li><a href="rsidebar.html"><span>Right Sidebar</span></a></li>
+          </ul>
+        </li>
+        <li class="drop"><a href="javascript:void(0);"><span>Heading Templates</span></a>
+          <ul>
+            <li><a href="heading.html"><span>Standard Heading</span></a></li>
+            <li><a href="heading_icon.html"><span>With Icon</span></a></li>
+            <li><a href="heading_text.html"><span>With Text</span></a></li>
+            <li><a href="heading_icon_text.html"><span>With Icon &amp; Text</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="drop"><a href="javascript:void(0);"><span>Nosotros</span></a>
+      <ul>
+        <li class="drop"><a href="javascript:void(0);"><span>Sortable Portfolio</span></a>
+          <ul>
+            <li><a href="portfolio_sort_four.html"><span>Four Columns</span></a></li>
+            <li><a href="portfolio_sort_three.html"><span>Three Columns</span></a></li>
+            <li><a href="portfolio_sort_two.html"><span>Two Columns</span></a></li>
+            <li><a href="portfolio_sort_one.html"><span>One Column</span></a></li>
+          </ul>
+        </li>
+        <li class="drop"><a href="javascript:void(0);"><span>Without Sorting</span></a>
+          <ul>
+            <li><a href="portfolio_four.html"><span>Four Columns</span></a></li>
+            <li><a href="portfolio_three.html"><span>Three Columns</span></a></li>
+            <li><a href="portfolio_two.html"><span>Two Columns</span></a></li>
+            <li><a href="portfolio_one.html"><span>One Column</span></a></li>
+          </ul>
+        </li>
+        <li class="drop"><a href="javascript:void(0);"><span>Project Layouts</span></a>
+          <ul>
+            <li><a href="project_slider.html"><span>Image Slider</span></a></li>
+            <li><a href="project_video.html"><span>Video</span></a></li>
+            <li><a href="album_four.html"><span>Album Four Columns</span></a></li>
+            <li><a href="album_three.html"><span>Album Three Columns</span></a></li>
+            <li><a href="album_two.html"><span>Album Two Columns</span></a></li>
+            <li><a href="album_one.html"><span>Album One Column</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li> -->
 
+    <!-- <li><a href="contacts.html"><span>Contacto</span></a></li> -->
+  </ul>
+  <div class="cl"></div>
+</nav>
+<div class="cl"></div>
 </div>
+</header>
+<!-- __________________________________________________ Finish Header -->
+
+<div class="container">
+  
+
+<!-- __________________________________________________ Start Top -->
+
+<section id="top">
+	<div class="top_inner">
+		<div class="wrap_rev_slider">
+			<!-- START REVOLUTION SLIDER 2.3.1 -->
+			<div id="rev_slider_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
+				<div id="rev_slider" class="rev_slider fullwidthabanner" style="display:none; max-height:479px; height:479;">
+					<ul>
+						<li data-transition="random" data-slotamount="7" data-masterspeed="300" >
+							 <img alt="" src="static/images/revolution/bg-1.jpg" />
+							<!-- <div data-linktoslide="4" data-easing="easeOutExpo" data-start="2900" data-speed="1000" data-y="283" data-x="671" class="caption sft tp-caption start">
+								<img alt="" src="static/images/revolution/img-2.jpg" />
+							</div>
+							<div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="2200" data-speed="700" data-y="283" data-x="883">
+								<img alt="" src="static/images/revolution/img-3.jpg" />
+							</div>
+							<div data-easing="easeOutBack" data-start="2000" data-speed="800" data-y="64" data-x="671" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/revolution/img-1.jpg" />
+							</div> -->
+							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="600" data-speed="1000" data-y="82" data-x="76" class="caption sft tp-caption start">
+								<img alt="" src="static/images/slider/descband.jpg" />
+							</div>
+							<!-- <div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="1800" data-speed="700" data-y="82" data-x="405">
+								<img alt="" src="static/images/revolution/img-5.jpg" />
+							</div>
+							<div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="245" data-x="405" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/revolution/img-6.jpg" />
+							</div> -->
+							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="800" data-speed="1000" data-y="75" data-x="480" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/slider/med1.png" />
+							</div>
+							<div class="caption lfb tp-caption start" data-easing="easeOutExpo" data-start="1000" data-speed="700" data-y="190" data-x="480">
+								<img alt="" src="static/images/slider/med2.png" />
+							</div>
+							<div data-easing="easeOutExpo" data-start="1200" data-speed="800" data-y="285" data-x="480" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/slider/med3.png" />
+							</div>
+						</li>
+						<li data-transition="random" data-slotamount="7" >
+							<img alt="" src="static/images/revolution/bg-3.jpg" />
+							<div class="caption lft" data-easing="easeOutExpo" data-start="1300" data-speed="1000" data-y="50" data-x="71">
+								<img alt="" src="static/images/slider/printer.png" />
+							</div>
+							<div data-easing="easeOutBack" data-start="1800" data-speed="700" class="caption lfb tp-caption start" data-y="140" data-x="706">
+								<img alt="" src="static/images/slider/desctsc.png" />
+							</div>
+							<!-- <div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="285" data-x="706" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/revolution/img-8.jpg" />
+							</div>
+							<div data-easing="easeOutBack" data-start="2400" data-speed="800" data-y="285" data-x="887" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/revolution/img-9.jpg" />
+							</div> -->
+						</li>
+						<!-- <li data-transition="random" data-slotamount="7" >
+							<img alt="" src="static/images/revolution/bg-2.jpg" />
+							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="1800" data-speed="1000" data-y="82" data-x="76" class="caption sft tp-caption start">
+								<img alt="" src="static/images/revolution/img-4.jpg" />
+							</div>
+							<div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="1800" data-speed="700" data-y="82" data-x="405">
+								<img alt="" src="static/images/revolution/img-5.jpg" />
+							</div>
+							<div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="245" data-x="405" class="caption lfb tp-caption start">
+								<img alt="" src="static/images/revolution/img-6.jpg" />
+							</div>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+
+				var tpj=jQuery;
+
+				tpj.noConflict();
+
+				var revapi2;
+
+				tpj(document).ready(function() {
+
+					if (tpj.fn.cssOriginal != undefined)
+					tpj.fn.css = tpj.fn.cssOriginal;
+
+					if(tpj('#rev_slider').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider');
+					else
+					revapi2 = tpj('#rev_slider').show().revolution(
+					{
+						delay:9000,
+						startwidth:1160,
+						startheight:479,
+						hideThumbs:200,
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:5,
+
+						navigationType:"bullet",
+						navigationArrows:"solo",
+						navigationStyle:"round",
+
+						touchenabled:"on",
+						onHoverStop:"on",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:21,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:0,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:0,
+						soloArrowRightVOffset:0,
+
+						shadow:1,
+						fullWidth:"on",
+
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0
+					});
+
+				});	//ready
+
+			</script>
+			<div class="cl"></div>
+		</div>
+	</div>
+</section>
+<!-- __________________________________________________ Finish Top -->
+
+<!-- __________________________________________________ Start Middle -->
+
+<section id="middle">
+	<div class="middle_inner">
+
+		<!-- __________________________________________________ Start Content -->
+
+		<section id="middle_content">
+			<div class="entry">
+				<h3 class="cms_title">Brazaletes de identificación hospitalarios</h3>
+				<div class="one_third aligncenter">
+					<div class="featured_block">
+						<div class="cmsms_services_icon">
+							<img alt="" class="aligncenter" src="static/images/img/home_1.png">
+						</div>
+						<h2>Comodidad</h2>
+						<p>Fabricado con materiales suaves, confortables y duraderos.</p>
+					</div>
+				</div>
+				<div class="one_third aligncenter">
+					<div class="featured_block">
+						<div class="cmsms_services_icon">
+							<img alt="" class="aligncenter" src="static/images/img/home_2.png">
+						</div>
+						<h2>Durabilidad</h2>
+						<p>Resistentes al agua, jabón, alcohol y desinfectante de manos.</p>
+					</div>
+				</div>
+				<div class="one_third last aligncenter">
+					<div class="featured_block">
+						<div class="cmsms_services_icon">
+							<img alt="" class="aligncenter" src="static/images/img/home_3.png">
+						</div>
+						<h2>Advanced SEO</h2>
+						<p>Material hipoalergénico y libre de látex</p>
+					</div>
+				</div>
+				<div class="cl"></div>
+
+				<div class="cl"></div>
+
+				<div class="colored_shortcode">
+					<div class="colored_title">
+						<div class="colored_title_inner">
+							<h2>Preparamos un documento sobre nuestros productos</h2>
+							<p>Entérate de todo lo que tenemos para ti</p>
+						</div>
+					</div>
+					<a class="colored_button" href="MedBand.pdf"><span class="icon_banner icon_down"></span>Descargar</a>
+				</div>
+			</div>
+		</section>
+		<!-- __________________________________________________ Finish Content -->
+
+	</div>
+</section>
+<!-- __________________________________________________ Finish Middle -->
+
+
+<!-- __________________________________________________ Start Bottom -->
+
+<section id="bottom">
+	<div class="bottom_inner">
+		<p>ventas@handband.cl / fono: 227171950 / Monseñor Felix Cabrera 66 oficina F, Providencia, Santiago.</p>
+	</div>
+</section>
+<!-- __________________________________________________ Finish Bottom -->
 </div>
-</div>
-<div id="sites-chrome-onebar-footer">
-</div>
 
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    window.jstiming.load.tick('sjl');
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" src="./medband_files/jot_min_view__es.js"></script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    window.jstiming.load.tick('jl');
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml">
-
-        sites.core.Analytics.createTracker();
-        sites.core.Analytics.trackPageview();
-
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
-    </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
-            JOT_setupNav("2bd", "Navegación", true);
-            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
-          </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-  setTimeout(function() {
-    var fingerprint = gsites.date.TimeZone.getFingerprint([]);
-    gsites.Xhr.send('http://medband.handband.cl/_/tz', null, null, 'GET', null, null, { afjstz: fingerprint });
-  }, 500);
-</script>
-<script xmlns="http://www.w3.org/1999/xhtml">
-                    window.onload = function() {
-                      if (false) {
-                        JOT_setMobilePreview();
-                      }
-                      var loadTimer = window.jstiming.load;
-                      loadTimer.tick("ol");
-                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
-                      window.jstiming.report(loadTimer, {}, 'http://csi.gstatic.com/csi');
-                    }
-                  </script>
-
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-        JOT_insertAnalyticsCode(false,
-            false);
-      </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
-        webspace, "es");
-    maestroRunner.initListeners();
-    maestroRunner.installEditRender();
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
-  //<![CDATA[
-    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
-    if (webspace.user.hasWriteAccess) {
-      JOT_decorateButtons();
-    }
-
-    // Fires delayed events.
-    (function() {
-      JOT_fullyLoaded = true;
-      var delayedEvents = JOT_delayedEvents;
-      for (var x = 0; x < delayedEvents.length; x++) {
-        var event = delayedEvents[x];
-        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
-      }
-      JOT_delayedEvents = null;
-      JOT_postEvent('pageLoaded');
-    })();
- //]]>
-</script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    JOT_postEvent('decorateGvizCharts');
-  </script>
-<script type="text/javascript">
-          JOT_setupNoticeManager();
-        </script>
-<script type="text/javascript">
-          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
-        </script>
-<div id="server-timer-div" style="display:none"> </div>
-<script type="text/javascript">
-          window.jstiming.load.tick('render');
-          JOT_postEvent('usercontentrendered', this);
-        </script>
+<!-- __________________________________________________ Finish Page -->
 
 
-<span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; opacity: 0.9; cursor: pointer; background-image: url(chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png); background-size: 100px 25px;"></span></body></html>
+<!-- __________________________________________________ Start Footer -->
+
+<footer id="footer">
+  <div class="footer_inner">
+    <span>HandBand Chile &copy; 2015 Reservados todos los derechos</span>
+    <!-- <div class="fr">
+      <ul id="footer_nav" class="footer_nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </div> -->
+  </div>
+</footer>
+<!-- __________________________________________________ Finish Footer -->
+
+<script src="static/js/jackbox.js" type="text/javascript"></script>
+<script src="static/js/jackbox-lib.js" type="text/javascript"></script>
+<script src="static/js/jquery.script.js" type="text/javascript"></script>
+<script src="static/js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="static/js/jquery.validationEngine-lang.js" type="text/javascript"></script>
+<script src="static/js/jquery.tweet.min.js" type="text/javascript"></script>
+<script src="static/js/respond.js" type="text/javascript"></script>
+</body>
+</html>
