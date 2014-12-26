@@ -1,3 +1,8 @@
+{% set navigation = [
+  ('/', 'home', 'Inicio', None),
+  ('/contact.html', 'contact', 'Contacto', None)
+  ] -%}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html dir="ltr" lang="en-US" class="ie6"><![endif]-->
 <!--[if IE 7]><html dir="ltr" lang="en-US" class="ie7"><![endif]-->
@@ -71,12 +76,17 @@
 <a class="social_toggle" href="#"><span></span></a>
 </div>
 -->
-<a class="logo" href="index.html"><img src="static/images/logo.png" height="69" alt="" /></a>
+<a class="logo" href="index.html"><img src="static/images/logo.png"  alt="" /></a>
 <a class="resp_navigation" href="javascript:void(0);"><span></span></a>
 <div class="cl"></div>
 <nav>
   <ul id="navigation">
-    <li class="current_page_item"><a href="index.html"><span>Inicio</span></a></li>
+    {% for href, id, caption, sub_nav in navigation %}
+
+    <li {% if id == active_page %}class="current_page_item"{% endif %}>
+      <a href="{{href}}"><span>{{ caption|e }}</span></a>
+    </li>
+    {% endfor %}
     <!-- <li class="drop"><a href="javascript:void(0);"><span>Productos</span></a>
       <ul>
         <li class="drop"><a href="javascript:void(0);"><span>Shortcodes</span></a>

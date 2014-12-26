@@ -78,12 +78,12 @@
   <ul id="navigation">
     
 
-    <li class="current_page_item">
+    <li >
       <a href="index.html"><span>Inicio</span></a>
     </li>
     
 
-    <li >
+    <li class="current_page_item">
       <a href="contact.html"><span>Contacto</span></a>
     </li>
     
@@ -169,215 +169,141 @@
 <div class="container">
   
 
-<!-- __________________________________________________ Start Top -->
+				<section id="middle">
+					<div class="middle_inner">
+<!-- __________________________________________________ Start Content -->
 
-<section id="top">
-	<div class="top_inner">
-		<div class="wrap_rev_slider">
-			<!-- START REVOLUTION SLIDER 2.3.1 -->
-			<div id="rev_slider_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
-				<div id="rev_slider" class="rev_slider fullwidthabanner" style="display:none; max-height:479px; height:479;">
-					<ul>
-						<li data-transition="random" data-slotamount="7" data-masterspeed="300" >
-							 <img alt="" src="static/images/revolution/bg-1.jpg" />
-							<!-- <div data-linktoslide="4" data-easing="easeOutExpo" data-start="2900" data-speed="1000" data-y="283" data-x="671" class="caption sft tp-caption start">
-								<img alt="" src="static/images/revolution/img-2.jpg" />
-							</div>
-							<div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="2200" data-speed="700" data-y="283" data-x="883">
-								<img alt="" src="static/images/revolution/img-3.jpg" />
-							</div>
-							<div data-easing="easeOutBack" data-start="2000" data-speed="800" data-y="64" data-x="671" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/revolution/img-1.jpg" />
-							</div> -->
-							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="600" data-speed="1000" data-y="82" data-x="76" class="caption sft tp-caption start">
-								<img alt="" src="static/images/slider/descband.jpg" />
-							</div>
-							<!-- <div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="1800" data-speed="700" data-y="82" data-x="405">
-								<img alt="" src="static/images/revolution/img-5.jpg" />
-							</div>
-							<div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="245" data-x="405" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/revolution/img-6.jpg" />
-							</div> -->
-							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="800" data-speed="1000" data-y="75" data-x="480" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/slider/med1.png" />
-							</div>
-							<div class="caption lfb tp-caption start" data-easing="easeOutExpo" data-start="1000" data-speed="700" data-y="190" data-x="480">
-								<img alt="" src="static/images/slider/med2.png" />
-							</div>
-							<div data-easing="easeOutExpo" data-start="1200" data-speed="800" data-y="285" data-x="480" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/slider/med3.png" />
-							</div>
-						</li>
-						<li data-transition="random" data-slotamount="7" >
-							<img alt="" src="static/images/revolution/bg-3.jpg" />
-							<div class="caption lft" data-easing="easeOutExpo" data-start="1300" data-speed="1000" data-y="50" data-x="71">
-								<img alt="" src="static/images/slider/printer.png" />
-							</div>
-							<div data-easing="easeOutBack" data-start="1800" data-speed="700" class="caption lfb tp-caption start" data-y="140" data-x="706">
-								<img alt="" src="static/images/slider/desctsc.png" />
-							</div>
-							<!-- <div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="285" data-x="706" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/revolution/img-8.jpg" />
-							</div>
-							<div data-easing="easeOutBack" data-start="2400" data-speed="800" data-y="285" data-x="887" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/revolution/img-9.jpg" />
-							</div> -->
-						</li>
-						<!-- <li data-transition="random" data-slotamount="7" >
-							<img alt="" src="static/images/revolution/bg-2.jpg" />
-							<div data-linktoslide="4" data-easing="easeOutExpo" data-start="1800" data-speed="1000" data-y="82" data-x="76" class="caption sft tp-caption start">
-								<img alt="" src="static/images/revolution/img-4.jpg" />
-							</div>
-							<div class="caption randomrotate tp-caption start" data-easing="easeOutExpo" data-start="1800" data-speed="700" data-y="82" data-x="405">
-								<img alt="" src="static/images/revolution/img-5.jpg" />
-							</div>
-							<div data-easing="easeOutBack" data-start="2200" data-speed="800" data-y="245" data-x="405" class="caption lfb tp-caption start">
-								<img alt="" src="static/images/revolution/img-6.jpg" />
-							</div>
-						</li> -->
-					</ul>
-				</div>
-			</div>
-			<script type="text/javascript">
+						<div class="content_wrap">
+							<section id="content">
+								<div class="entry">
+									<h2>Envíanos un mensaje</h2>
+									<div class="cmsms-form-builder">
+										<div class="box success_box" style="display:none;">
+											<table>
+												<tr>
+													<td>&nbsp;</td>
+													<td>¡Gracias!<br>Tu mensaje ha sido recibido. Nos pondremos en contacto contigo a la brevedad.</td>
+												</tr>
+											</table>
+										</div>
+										<script type="text/javascript">
+											jQuery(document).ready(function () {
+												jQuery('#contactform').validationEngine('init');
 
-				var tpj=jQuery;
+												jQuery('#contactform a#contact_form_formsend').click(function () {
+													var form_builder_url = jQuery('#contact_form_url').val();
 
-				tpj.noConflict();
+													jQuery('#contactform .loading').animate( { opacity : 1 }, 250);
 
-				var revapi2;
+													var var_cmsms_check = '';
 
-				tpj(document).ready(function() {
+													jQuery('input[name="cmsms_check"]:checked').each(function () {
+														var_cmsms_check += jQuery(this).val() + ', ';
+													} );
 
-					if (tpj.fn.cssOriginal != undefined)
-					tpj.fn.css = tpj.fn.cssOriginal;
+													if (var_cmsms_check !== '') {
+														var_cmsms_check = var_cmsms_check.slice(0, -2);
+													}
 
-					if(tpj('#rev_slider').revolution == undefined)
-					revslider_showDoubleJqueryError('#rev_slider');
-					else
-					revapi2 = tpj('#rev_slider').show().revolution(
-					{
-						delay:9000,
-						startwidth:1160,
-						startheight:479,
-						hideThumbs:200,
+													if (jQuery('#contactform').validationEngine('validate')) {
+														jQuery.post(form_builder_url, {
+															contact_name : jQuery('#contact_name').val(),
+															contact_email : jQuery('#contact_email').val(),
+															contact_message : jQuery('#contact_message').val(),
+															company_name: jQuery('#company_name').val(),
+															contact_tel: jQuery('#contact_tel').val(),
+															cmsms_check : var_cmsms_check,
+															cmsms_radiobutton : jQuery('input[name="cmsms_radiobutton"]:checked').val(),
+															cmsms_options : jQuery('#cmsms_options').val(),
+															formname : 'contact_form',
+															formtype : 'contactf'
+														}, function () {
+															jQuery('#contactform .loading').animate( { opacity : 0 }, 250);
 
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:5,
+															document.getElementById('contactform').reset();
 
-						navigationType:"bullet",
-						navigationArrows:"solo",
-						navigationStyle:"round",
+															jQuery('#contactform').parent().find('.box').hide();
+															jQuery('#contactform').parent().find('.success_box').fadeIn('fast');
+															jQuery('html, body').animate( { scrollTop : jQuery('#contactform').offset().top - 100 }, 'slow');
+															jQuery('#contactform').parent().find('.success_box').delay(5000).fadeOut(1000);
+														} );
 
-						touchenabled:"on",
-						onHoverStop:"on",
+														return false;
+													} else {
+														jQuery('#contactform .loading').animate( { opacity : 0 }, 250);
 
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:0,
-						navigationVOffset:21,
+														return false;
+													}
+												} );
+											} );
+										</script>
+										<form action="#" method="post" id="contactform">
+											<p>Los campos requeridos están marcados con <span class="color2">*</span></p>
+											<div class="form_info cmsms_input">
+												<label for="contact_name">Nombre <span class="color2">*</span></label>
+												<input type="text" name="contact_name" id="contact_name" value="" size="22" tabindex="1" class="validate[required,minSize[3],maxSize[100],custom[onlyLetterSp]]"/>
+											</div>
+											<div class="form_info cmsms_input">
+												<label for="company_name">Empresa </label>
+												<input type="text" name="company_name" id="company_name" value="" size="22" tabindex="1" class="validate[minSize[3],maxSize[100],custom[onlyLetterSp]]"/>
+											</div>
+											<div class="cl"></div>
+											<div class="form_info cmsms_input">
+												<label for="contact_email">Correo <span class="color2">*</span></label>
+												<input type="text" name="contact_email" id="contact_email" value="" size="22" tabindex="1" class="validate[required,custom[email]]" />
+											</div>
+											<div class="form_info cmsms_input">
+												<label for="contact_tel">Teléfono</label>
+												<input type="text" name="contact_tel" id="contact_tel" value="" size="22" tabindex="1" class="validate[minSize[3],maxSize[100]]"/>
+											</div>
+											<div class="cl"></div>
+											<div class="cl"></div>
+											<div class="cl"></div>
+											<div class="form_info cmsms_textarea">
+												<label for="contact_message">Mensaje <span class="color2">*</span></label>
+												<textarea name="contact_message" id="contact_message" cols="28" rows="6" tabindex="1" class="validate[required,minSize[3]]" ></textarea>
+											</div>
+											<div class="cl"></div>
 
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:0,
-						soloArrowLeftVOffset:0,
+											<div class="cl"></div>
+											<div><input type="hidden" name="contact_form_url" id="contact_form_url" value="http://localhost:5000/contact/medband" /></div><!-- Here you need to set the path to the sendmail file -->
+											<div>
+												<a href="#" class="button" id="contact_form_formsend" tabindex="8"><span>Enviar</span></a>
+												<div class="loading"></div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</section>
+<!-- __________________________________________________ Finish Content -->
 
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:0,
-						soloArrowRightVOffset:0,
+<!-- __________________________________________________ Start Sidebar -->
 
-						shadow:1,
-						fullWidth:"on",
+							<section id="sidebar">
+								<div class="one_first">
+									<aside class="widget widget_custom_latest_popular_recent_entries">
+										<h2 class="widgettitle">Llámanos, visítanos.</h2>
+										<div class="tab lpr">
+											<address>
+												<strong>MedBand - Comercial HandBand Chile LTDA</strong>
+												<br>Monseñor Felix Cabrera 66 of. F
+												<br>Providencia, Santiago
+												<br>Chile
+												<br>
+												<br>Teléfono: +56 2 27171950
+												<br>Móvil: +56 9 66896786
+											</address>
+										</div>
+									</aside>
+								</div>
 
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
+							</section>
+<!-- __________________________________________________ Finish Sidebar -->
 
-						shuffle:"off",
-
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						startWithSlide:0
-					});
-
-				});	//ready
-
-			</script>
-			<div class="cl"></div>
-		</div>
-	</div>
-</section>
-<!-- __________________________________________________ Finish Top -->
-
-<!-- __________________________________________________ Start Middle -->
-
-<section id="middle">
-	<div class="middle_inner">
-
-		<!-- __________________________________________________ Start Content -->
-
-		<section id="middle_content">
-			<div class="entry">
-				<h3 class="cms_title">Brazaletes de identificación hospitalarios</h3>
-				<div class="one_third aligncenter">
-					<div class="featured_block">
-						<div class="cmsms_services_icon">
-							<img alt="" class="aligncenter" src="static/images/img/home_1.png">
-						</div>
-						<h2>Comodidad</h2>
-						<p>Fabricado con materiales suaves, confortables y duraderos.</p>
-					</div>
-				</div>
-				<div class="one_third aligncenter">
-					<div class="featured_block">
-						<div class="cmsms_services_icon">
-							<img alt="" class="aligncenter" src="static/images/img/home_2.png">
-						</div>
-						<h2>Durabilidad</h2>
-						<p>Resistentes al agua, jabón, alcohol y desinfectante de manos.</p>
-					</div>
-				</div>
-				<div class="one_third last aligncenter">
-					<div class="featured_block">
-						<div class="cmsms_services_icon">
-							<img alt="" class="aligncenter" src="static/images/img/home_3.png">
-						</div>
-						<h2>Advanced SEO</h2>
-						<p>Material hipoalergénico y libre de látex</p>
-					</div>
-				</div>
-				<div class="cl"></div>
-
-				<div class="cl"></div>
-
-				<div class="colored_shortcode">
-					<div class="colored_title">
-						<div class="colored_title_inner">
-							<h2>Preparamos un documento sobre nuestros productos</h2>
-							<p>Entérate de todo lo que tenemos para ti</p>
 						</div>
 					</div>
-					<a class="colored_button" href="MedBand.pdf"><span class="icon_banner icon_down"></span>Descargar</a>
-				</div>
-			</div>
-		</section>
-		<!-- __________________________________________________ Finish Content -->
-
-	</div>
-</section>
+				</section>
 <!-- __________________________________________________ Finish Middle -->
-
-
-<!-- __________________________________________________ Start Bottom -->
-
-<section id="bottom">
-	<div class="bottom_inner">
-		<p>ventas@handband.cl / fono: 227171950 / Monseñor Felix Cabrera 66 oficina F, Providencia, Santiago.</p>
-	</div>
-</section>
-<!-- __________________________________________________ Finish Bottom -->
 </div>
 
 <!-- __________________________________________________ Finish Page -->
